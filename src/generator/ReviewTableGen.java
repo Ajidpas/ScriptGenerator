@@ -4,7 +4,7 @@ import java.util.EnumSet;
 
 import generator.Generator.Library;
 
-public class NewsTableGen implements TableGen {
+public class ReviewTableGen implements TableGen {
 	
 	/**
 	 * 
@@ -17,8 +17,8 @@ public class NewsTableGen implements TableGen {
 	@Override
 	public String generat(int countForEachHeading) {
 		StringBuilder script = new StringBuilder();
-		script.append("INSERT INTO news ");
-		script.append("(title, creating_date, updating_date, heading) ");
+		script.append("INSERT INTO review ");
+		script.append("(theme, publication_date, heading) ");
 		script.append("VALUES ");
 		for (Library lib : EnumSet.of(Library.POWER, Library.SPORT, Library.HEALTH)) {
 			Generator gen = new Generator(lib);
@@ -36,8 +36,6 @@ public class NewsTableGen implements TableGen {
 			items.append(gen.getTitle());
 			items.append("', '");
 			items.append(gen.getCreatingDate());
-			items.append("', '");
-			items.append(gen.getUpdatingDate());
 			items.append("', ");
 			items.append(gen.getHeadingId());
 			items.append("),");

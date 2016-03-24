@@ -8,7 +8,7 @@ public class HealthLibrary implements WordLibrary {
 	
 	@Override
 	public List<String> getPersons() {
-		return new ArrayList(Arrays.asList("Peoples' Health", "Your Health", "Our health", "Children health", "Body"));
+		return new ArrayList(Arrays.asList("Health of people", "Your Health", "Our health", "Children health", "Body"));
 	}
 	
 	@Override

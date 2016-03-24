@@ -8,7 +8,7 @@ public class PresidentLibrary implements WordLibrary {
 
 	@Override
 	public List<String> getPersons() {
-		return new ArrayList(Arrays.asList("President", "Poroshenko", "Obama", "Ministr"));
+		return new ArrayList(Arrays.asList("President", "Poroshenko", "Obama", "Minister"));
 	}
 	
 	@Override
